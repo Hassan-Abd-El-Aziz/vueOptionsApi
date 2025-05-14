@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Hello {{name}}</h1>
+      <a :href="link" @click.prevent>GitHub</a>
+      <button @click.once="tstFun()">Click</button>
+      <hr />
+      <input type="text" v-model="text" @keydown.enter="print" />
+      <h2>{{text}}</h2>
+
+      <form action="" @submit.prevent="addUser">
+        <input type="text" v-model="userName" />
+        <input type="text" v-model="age" />
+        <input type="submit" value="Send" />
+      </form>
+      <hr />
+      <h1>number one is: {{one}}</h1>
+      <h1> {{oneinc}}</h1>
+      <button @click="one++">Inc</button>
+      <h1>number Two is: {{two}}</h1>
+      <button @click="two++">Inc</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
