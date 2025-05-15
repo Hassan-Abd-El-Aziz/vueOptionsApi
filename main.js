@@ -21,14 +21,19 @@ createApp({
     addUser() {
       console.log(`Heloo ${this.userName} age is ${this.age}`);
     },
-    computed: {
-      oneinc() {
-        console.log(this.one * 2);
-      },
-      twoinc() {
-        console.log(`twoChanged`);
-        this.two++;
-      },
+    changOne() {
+      console.log("one");
+    },
+    changTwo() {
+      console.log("one");
+    },
+  },
+  computed: {
+    printOne() {
+      return this.one * 2;
+    },
+    printTwo() {
+      return this.two * 2;
     },
   },
 }).mount("#app");
