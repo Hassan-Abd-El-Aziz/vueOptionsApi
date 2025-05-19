@@ -7,26 +7,8 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="app">
-      <ul>
-        <li v-for="(link,i) in links " :key="i">{{link}}</li>
-        <li v-for="(name,i) in names" :key="i">
-          {{name.name}} salary is {{name.salary}}
-        </li>
-      </ul>
-      <div class="cards" v-for="(product,i) in products" :key="i">
-        <img src="product.imgs" alt="" />
-        <h2>{{product.title}}</h2>
-        <p>{{product.price}}</p>
-        <span
-          :class="color"
-          style="padding: 10px"
-          v-for="(color,i) in colors"
-          :key="i"
-          >{{color}}</span
-        >
-      </div>
-    </div>
+    <div id="app1"><my_com></my_com></div>
+    <div id="app2"><my_com></my_com></div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
   </body>

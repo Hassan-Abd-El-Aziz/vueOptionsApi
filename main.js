@@ -1,20 +1,35 @@
 const { createApp } = Vue;
-createApp({
+const dt = {
+  age: 1,
+};
+const my_com = {
+  template: `<h1>Heloo {{name}} </h1> <input type="text" v-model="name"/> <h1>{{dt.age}}</h1>
+  <button @click="dt.age++">Click me</button>`,
   data() {
     return {
-      age: 30,
-      links: ["one", "two", "three"],
-      names: [
-        { name: "hassan", salary: 150000 },
-        { name: "zizo", salary: 20000 },
-        { name: "ahmed", salary: 3051000 },
-      ],
-      products: [
-        { title: "pro One", price: 150, imgs: "1.png" },
-        { title: "pro Two", price: 200, imgs: "5.png" },
-        { title: "pro Three", price: 100, imgs: "8.png" },
-      ],
-      colors: ["red", "green", "blue"],
+      name: "",
+      dt,
     };
   },
-}).mount("#app");
+  methods: {
+    inc() {
+      dt.age++;
+    },
+  },
+};
+const vue1 = createApp({
+  data() {
+    return {};
+  },
+  components: {
+    my_com,
+  },
+}).mount("#app1");
+const vue2 = createApp({
+  data() {
+    return {};
+  },
+  components: {
+    my_com,
+  },
+}).mount("#app2");
